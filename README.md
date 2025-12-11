@@ -89,7 +89,7 @@ plt.show()
 
 ```
 ### Results
-![Visualisation of Top Skills](3_Project\images\skill_demand.png)
+![Visualisation of Top Skills](3_Project/images/skill_demand.png)
 
 *Likelihood of skills needed in Data Jobs in the US*
 
