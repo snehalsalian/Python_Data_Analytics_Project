@@ -60,7 +60,7 @@ df_US = df[df['job_country'] == 'United States']
 ## 1. To find the most demanded skills for the top 3 most popular data roles.
  I filtered out those positions by which ones were the most popular, and got the top 5 skills for these top 3 roles. This query highlights the most popular job titles and their top skills, showing which skills I should pay attention to depending on the role I'm targeting.
 
-View my notebook with detailed steps here: [2_Skills_Count.ipynb](3_Project\2_Skills_Count.ipynb)
+View my notebook with detailed steps here: [2_Skills_Count.ipynb](3_Project/2_Skills_Count.ipynb)
 
 ### Visualise Data
 ```python
@@ -108,7 +108,7 @@ plt.show()
 ## 2 To find how skills are trending in 2023 for Data Analysts
  I filtered data analyst positions and grouped the skills by the month of the job postings. This got me the top 5 skills of data analysts by month, showing how popular skills were throughout 2023.
 
-View my notebook with detailed steps here:[3_Skills_Trends.ipynb](3_Project\3_Skills_Trends.ipynb)
+View my notebook with detailed steps here:[3_Skills_Trends.ipynb](3_Project/3_Skills_Trends.ipynb)
 
 ```python
 from matplotlib.ticker import PercentFormatter
@@ -120,7 +120,7 @@ plt.gca().yaxis.set_major_formatter(PercentFormatter(decimals=0))
 
 plt.show()
 ```
-![Skill trends visualisation](3_Project\images\skill_trends.png)
+![Skill trends visualisation](3_Project/images/skill_trends.png)
 
 
 
@@ -135,7 +135,7 @@ plt.show()
 ## 3. How well do jobs and skills pay for Data Analysts?
 To identify the highest-paying roles and skills, I only got jobs in the United States and looked at their median salary. But first I looked at the salary distributions of common data jobs like Data Scientist, Data Engineer, and Data Analyst, to get an idea of which jobs are paid the most.
 
-View my notebook with detailed steps here:[Salary_analysis.ipynb](3_Project\4_Salary_Analysis.ipynb)
+View my notebook with detailed steps here:[Salary_analysis.ipynb](3_Project/4_Salary_Analysis.ipynb)
 
 ```python
 sns.boxplot(data=df_US_top6, x='salary_year_avg', y='job_title_short', order=job_order)
@@ -145,7 +145,7 @@ plt.gca().xaxis.set_major_formatter(ticks_x)
 plt.show()
 ```
 ### Results:
-![Visualisation of Salary Distributions in the US](3_Project\images\salary_analysis.png)
+![Visualisation of Salary Distributions in the US](3_Project/images/salary_analysis.png)
 
 
 *Box plot visualizing the salary distributions for the top 6 data job titles.*
@@ -173,7 +173,7 @@ plt.show()
 ```
 ### Results
 
-![Visualisation](3_Project\images\demand_pay.png)
+![Visualisation](3_Project/images/demand_pay.png)
 
 
 *Seperate bar graphs visualising the highes paid skills and the most in-demand skills for data analysts in the US*
@@ -190,7 +190,7 @@ plt.show()
 
 To identify the most optimal skills to learn ( the ones that are the highest paid and highest in demand) I calculated the percent of skill demand and the median salary of these skills. To easily identify which are the most optimal skills to learn.
 
-View my notebook with detailed steps here: [5_Optimal_Skills.ipynb](3_Project\5_Optimal_skills.ipynb)
+View my notebook with detailed steps here: [5_Optimal_Skills.ipynb](3_Project/5_Optimal_skills.ipynb)
 
 ```python
 sns.scatterplot(
@@ -204,7 +204,7 @@ sns.despine()
 sns.set_theme(style='ticks')
 ```
 ### Results 
-![Scatterplot](3_Project\images\Scatterplot.png)
+![Scatterplot](3_Project/images/Scatterplot.png)
 
 
 *A scatter plot visualizing the most optimal skills (high paying & high demand) for data analysts in the US with color labels for technology.*
